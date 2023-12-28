@@ -1,4 +1,6 @@
+
 call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
 
 Plug 'tpope/vim-fugitive'
 
@@ -22,17 +24,14 @@ Plug 'dense-analysis/ale'
 
 call plug#end()
 
+set wildignore+=*.so,*.~,*.lock,*.dylib
 
 syntax enable 
 set nocompatible
 set backspace=indent,eol,start
 set autoindent
 set number
-if has("vms")
-    set nobackup
-else
-    set backup
-endif
+set nobackup
 
 set incsearch
 filetype plugin indent on
@@ -49,6 +48,5 @@ if has('gui_running')
 else
 "    set background=dark
 endif
-
 
 
